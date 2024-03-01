@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cell-size:100px;
+    --mark-size:calc(var(--cell-size) * .9);
+}
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: black;
+    color: whitesmoke;
+}
+
+main{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+   
+}
+
+h1{
+    font-size: 32px;
+    text-align: center;
+}
+
+.board {
+    min-width: 300px;
+    min-height: 300px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(3,auto);
+    justify-items: center;
+    align-items: center;
+}
+
+.cell{
+    min-width: var(--cell-size);
+    min-height: var(--cell-size);
+    background-color: whitesmoke;
+    border: 1px solid black;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.playerChoice{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+}
+
+.playerChoice .side1,
+.playerChoice .side2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    gap: 10px;
+}
+
+#player1, #player2 {
+    width: 5rem;
+    height: 2rem;
+}
+
+.cell{
+    font-size: 70px;
+}
+
+.winning-message{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 3rem;
+}
+
+button{
+    padding: 1rem 3rem;
+    background-color: lightcoral;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.5rem;
+}
+
+.winning-message.show{
+    display: grid;
+}
+
+
